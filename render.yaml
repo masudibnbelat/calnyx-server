@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: calnyx-screen-stream
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node dist/server.js
+    healthCheckPath: /health
